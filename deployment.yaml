@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: application
-          image: ravihari/go-rest-api
+          image: ravihari/restapi:v1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
