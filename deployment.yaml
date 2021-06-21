@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-rest-api
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      name: go-rest-api
+  template:
+    metadata:
+      labels:
+        name: go-rest-api
+    spec:
+      containers:
+        - name: application
+          image: ravihari/go-rest-api
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+            - containerPort: 8081
